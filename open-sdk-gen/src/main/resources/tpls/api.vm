@@ -1,0 +1,41 @@
+package com.youzan.open.sdk.gen.${model.packageVersion}.api;
+
+import com.youzan.open.sdk.api.AbstractAPI;
+import com.youzan.open.sdk.model.APIParams;
+import com.youzan.open.sdk.gen.${model.packageVersion}.model.${model.resultClass};
+import com.youzan.open.sdk.gen.${model.packageVersion}.model.${model.paramClass};
+
+public class ${model.className} extends AbstractAPI {
+
+    public ${model.className}() {
+    }
+
+    public ${model.className}(${model.paramClass} apiParams) {
+        this.params = apiParams;
+    }
+
+    public String getHttpMethod() {
+        return "${model.method}";
+    }
+
+    public String getVersion() {
+        return "${model.version}";
+    }
+
+    public String getName() {
+        return "${model.name}";
+    }
+
+    public Class getResultModelClass() {
+        return ${model.resultClass}.class;
+    }
+
+    public Class getParamModelClass() {
+        return ${model.paramClass}.class;
+    }
+
+    public boolean hasFiles() {
+        return #if($model.method == 'POST') true #else false #end;
+    }
+
+}

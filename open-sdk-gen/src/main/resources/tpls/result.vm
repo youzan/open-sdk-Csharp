@@ -1,0 +1,50 @@
+package com.youzan.open.sdk.gen.${model.packageVersion}.model;
+
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Maps;
+import com.google.common.collect.Multimap;
+import com.youzan.open.sdk.model.APIParams;
+import com.youzan.open.sdk.model.FileParams;
+import com.youzan.open.sdk.model.APIResult;
+import java.util.List;
+import java.util.Map;
+import java.util.Date;
+
+public class ${model.className} implements APIResult {
+
+    #foreach($field in $model.fields)
+    private $field.type $field.name;
+    #end
+
+    #foreach($field in $model.fields)
+
+    public void set${field.capName}($field.type $field.name) {
+        this.$field.name = $field.name;
+    }
+
+    public $field.type get${field.capName}() {
+        return this.$field.name;
+    }
+
+    #end
+
+    #foreach($clazz in $model.classes)
+    public static class $clazz.name {
+        #foreach($field in $clazz.fields)
+        private $field.type $field.name;
+        #end
+
+        #foreach($field in $clazz.fields)
+        public void set${field.capName}($field.type $field.name) {
+            this.$field.name = $field.name;
+        }
+
+        public $field.type get${field.capName}() {
+            return this.$field.name;
+        }
+        #end
+
+    }
+    #end
+
+}

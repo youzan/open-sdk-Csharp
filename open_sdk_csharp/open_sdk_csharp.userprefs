@@ -1,0 +1,23 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="open_sdk_csharp/README.md">
+    <Files>
+      <File FileName="open_sdk_csharp/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="open_sdk_csharp/Core/DefaultYZClient.cs" Line="25" Column="5" />
+      <File FileName="open_sdk_csharp/Util/MD5Util.cs" Line="1" Column="1" />
+      <File FileName="open_sdk_csharp/Exception/YZException.cs" Line="1" Column="1" />
+      <File FileName="open_sdk_csharp/Core/YZClient.cs" Line="1" Column="1" />
+      <File FileName="open_sdk_csharp/Auth/Auth.cs" Line="1" Column="1" />
+      <File FileName="open_sdk_csharp/Auth/Sign.cs" Line="1" Column="1" />
+      <File FileName="open_sdk_csharp/Auth/Token.cs" Line="1" Column="1" />
+      <File FileName="open_sdk_csharp/README.md" Line="2" Column="12" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../Projects/open_sdk_csharp1/open_sdk_csharp1/Core/DefaultYZClient.cs" line="74" offsetX="589" offsetY="1046" expression="reqUrl" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MultiItemStartupConfigurations />
+</Properties>

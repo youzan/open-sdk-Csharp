@@ -1,0 +1,74 @@
+package com.youzan.open.sdk.gen.${model.packageVersion}.model;
+
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Maps;
+import com.google.common.collect.Multimap;
+import com.youzan.open.sdk.model.APIParams;
+import com.youzan.open.sdk.model.ByteWrapper;
+import com.youzan.open.sdk.model.FileParams;
+import java.util.List;
+import java.util.Map;
+import java.util.Date;
+
+public class ${model.className} implements APIParams#if($model.hasFile), FileParams #end {
+
+#foreach($field in $model.fields)
+    private $field.type $field.name;
+#end
+
+#foreach($field in $model.fields)
+
+    public void set${field.capName}($field.type $field.name) {
+        this.$field.name = $field.name;
+    }
+
+    public $field.type get${field.capName}() {
+        return this.$field.name;
+    }
+
+#end
+
+    public Map<String, Object> toParams() {
+        Map<String, Object> params = Maps.newHashMap();
+#foreach($param in $model.params)
+        if ($param.name != null) {
+            params.put("$param.realName", $param.name);
+        }
+#end
+        return params;
+    }
+
+#if($model.hasFile)
+    public Multimap<String, ByteWrapper> toFileParams() {
+        Multimap<String, ByteWrapper> params = ArrayListMultimap.create();
+
+    #foreach($field in $model.fileParams)
+        if ($field.name != null) {
+            for (ByteWrapper wrapper : $field.name) {
+                params.put("$field.realName", wrapper);
+            }
+        }
+    #end
+        return params;
+    }
+#end
+
+#foreach($clazz in $model.classes)
+    public static class $clazz.name {
+    #foreach($field in $clazz.fields)
+        private $field.type $field.name;
+    #end
+
+    #foreach($field in $clazz.fields)
+        public void set${field.capName}($field.type $field.name) {
+            this.$field.name = $field.name;
+        }
+
+        public $field.type get${field.capName}() {
+            return this.$field.name;
+        }
+    #end
+    }
+#end
+
+}
