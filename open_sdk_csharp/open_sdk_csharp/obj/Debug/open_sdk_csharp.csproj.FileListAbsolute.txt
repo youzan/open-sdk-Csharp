@@ -1,9 +1,0 @@
-/Users/ph0ly/gitlab/open-sdk/open_sdk_csharp/open_sdk_csharp/bin/Debug/open_sdk_csharp.dll
-/Users/ph0ly/gitlab/open-sdk/open_sdk_csharp/open_sdk_csharp/bin/Debug/open_sdk_csharp.dll.mdb
-/Users/ph0ly/gitlab/open-sdk/open_sdk_csharp/open_sdk_csharp/obj/Debug/open_sdk_csharp.dll
-/Users/ph0ly/gitlab/open-sdk/open_sdk_csharp/open_sdk_csharp/obj/Debug/open_sdk_csharp.dll.mdb
-/Users/guiling/open-sdk/open_sdk_csharp/open_sdk_csharp/bin/Debug/open_sdk_csharp.dll
-/Users/guiling/open-sdk/open_sdk_csharp/open_sdk_csharp/bin/Debug/open_sdk_csharp.pdb
-/Users/guiling/open-sdk/open_sdk_csharp/open_sdk_csharp/obj/Debug/open_sdk_csharp.csproj.CoreCompileInputs.cache
-/Users/guiling/open-sdk/open_sdk_csharp/open_sdk_csharp/obj/Debug/open_sdk_csharp.dll
-/Users/guiling/open-sdk/open_sdk_csharp/open_sdk_csharp/obj/Debug/open_sdk_csharp.pdb
