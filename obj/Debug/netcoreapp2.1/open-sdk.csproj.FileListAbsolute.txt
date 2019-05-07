@@ -1,0 +1,11 @@
+/Users/guiling/Projects/soa/open-sdk-CSharp/bin/Debug/netcoreapp2.1/open-sdk.deps.json
+/Users/guiling/Projects/soa/open-sdk-CSharp/bin/Debug/netcoreapp2.1/open-sdk.runtimeconfig.json
+/Users/guiling/Projects/soa/open-sdk-CSharp/bin/Debug/netcoreapp2.1/open-sdk.runtimeconfig.dev.json
+/Users/guiling/Projects/soa/open-sdk-CSharp/bin/Debug/netcoreapp2.1/open-sdk.dll
+/Users/guiling/Projects/soa/open-sdk-CSharp/bin/Debug/netcoreapp2.1/open-sdk.pdb
+/Users/guiling/Projects/soa/open-sdk-CSharp/obj/Debug/netcoreapp2.1/open-sdk.csproj.CoreCompileInputs.cache
+/Users/guiling/Projects/soa/open-sdk-CSharp/obj/Debug/netcoreapp2.1/open-sdk.AssemblyInfoInputs.cache
+/Users/guiling/Projects/soa/open-sdk-CSharp/obj/Debug/netcoreapp2.1/open-sdk.AssemblyInfo.cs
+/Users/guiling/Projects/soa/open-sdk-CSharp/obj/Debug/netcoreapp2.1/open-sdk.dll
+/Users/guiling/Projects/soa/open-sdk-CSharp/obj/Debug/netcoreapp2.1/open-sdk.pdb
+/Users/guiling/Projects/soa/open-sdk-CSharp/obj/Debug/netcoreapp2.1/open-sdk.csprojAssemblyReference.cache

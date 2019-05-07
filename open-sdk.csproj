@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>open_sdk</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="auth\" />
+    <Folder Include="common\" />
+    <Folder Include="common\constant\" />
+    <Folder Include="exception\" />
+    <Folder Include="api\" />
+    <Folder Include="core\" />
+    <Folder Include="token\" />
+    <Folder Include="utils\" />
+    <Folder Include="http\" />
+    <Folder Include="token\type\" />
+    <Folder Include="token\entry\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="auth\EmptyInterface.cs" />
+    <Compile Remove="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="RestSharp" Version="106.6.9" />
+  </ItemGroup>
+</Project>
