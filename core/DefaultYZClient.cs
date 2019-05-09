@@ -18,7 +18,7 @@ namespace open_sdk.core
         }
        
 
-        string IYouZanClient.Invoke(IAPI api, IAuth auth)
+        string IYouZanClient.Invoke(IAPI api, IAuth auth, IDictionary<string, string> headers, List<KeyValuePair<string, string>> files)
         {
             {
                 string url = null;
@@ -41,7 +41,7 @@ namespace open_sdk.core
                     IApiParams apiParams = api.GetAPIParams();
                     IDictionary<string, string> requestParams = apiParams.ToParams();
                     IDictionary<string, string> header = api.GetHeaders();
-                    string result = defaultHttpClient.Send(url, requestParams, header, null);
+                    string result = defaultHttpClient.Send(url, requestParams, header, files);
                     return result;
                 }
                 return null;
