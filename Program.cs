@@ -24,15 +24,15 @@ namespace open_sdk
             //string token = tokenData.Token;
             //GeneralApi generalApi = new GeneralApi();
             //GeneralApiParams apiParams = new GeneralApiParams();
-            //generalApi.SetName("dubboDemo");
-            //generalApi.SetVersion("1.0.0");
+            //generalApi.SetName("youzan.trade.get");
+            //generalApi.SetVersion("4.0.0");
             //generalApi.SetOAuthType(common.constant.OAuthEnum.TOKEN);
-            //apiParams.AddParam("id", "2003777768");
+            //apiParams.AddParam("tid", "E20190521143436044000035");
             //generalApi.SetAPIParams(apiParams);
 
             //IYouZanClient defaultYZClient = new DefaultYZClient();
 
-            //string result  =  defaultYZClient.Invoke(generalApi,new Token(token));
+            //string result  =  defaultYZClient.Invoke(generalApi,new Token("32dcf5274f846e41270a2e9fcd4bdd8a"),null,null);
 
 
             //Console.WriteLine("request result *******************"+result);
@@ -50,15 +50,20 @@ namespace open_sdk
             //var conterent = response.Content; 
             //Console.WriteLine("request result *******************"+ conterent);
 
-            RefreshToken refresh = new RefreshToken("db9fe36d892719e921", "be58f76bbd80ee4af32c4f4655d20e9e")
-            {
-                FreshToken = ""
-            };
-            OauthToken.TokenData tokenData = refresh.GetToken();
+            //RefreshToken refresh = new RefreshToken("db9fe36d892719e921", "be58f76bbd80ee4af32c4f4655d20e9e")
+            //{
+            //    FreshToken = ""
+            //};
+            //OauthToken.TokenData tokenData = refresh.GetToken();
 
             Silent silent = new Silent("bifrost-console", "bifrost-console", 2003777768);
             OauthToken.TokenData silenToken  =silent.GetToken();
-            string token = tokenData.Token;
+            string token = silenToken.Token;
+            Console.WriteLine("request result *******************" + token);
+
+
+
+
         }
     }
 }

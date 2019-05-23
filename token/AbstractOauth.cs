@@ -6,7 +6,7 @@ namespace open_sdk.token
 {
     public abstract class AbstractOauth : IOauth
     {
-        private  string tokenUrl = "http://open.youzanyun.com/auth/token";
+        private  string tokenUrl = "https://open.youzanyun.com/auth/token";
 
         protected string clientId;
 
