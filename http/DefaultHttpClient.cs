@@ -34,7 +34,7 @@ namespace open_sdk.http
                     }
                 }
                 // User-Agent 值修改 TODO
-                httpClient.DefaultRequestHeaders.Add("User-Agent", "YZY-Open-Client 1.0.0 - CSharp");
+                httpClient.DefaultRequestHeaders.Add("UserAgent", "YZY-Open-Client 1.0.0-CSharp");
 
                 var builder = new UriBuilder(url);
 

@@ -56,14 +56,16 @@ namespace open_sdk
             //};
             //OauthToken.TokenData tokenData = refresh.GetToken();
 
+            //Silent silent = new Silent("bifrost-console", "bifrost-console", 2003777768);
+            //OauthToken.TokenData silenToken  =silent.GetToken();
+            //string token = silenToken.Token;
+            //Console.WriteLine("request result *******************" + token);
+
+
+
             Silent silent = new Silent("bifrost-console", "bifrost-console", 2003777768);
-            OauthToken.TokenData silenToken  =silent.GetToken();
+            OauthToken.TokenData silenToken = silent.GetToken();
             string token = silenToken.Token;
-            Console.WriteLine("request result *******************" + token);
-
-
-
-
         }
     }
 }
