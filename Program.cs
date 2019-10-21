@@ -22,19 +22,33 @@ namespace open_sdk
             //};
             //OauthToken.TokenData  tokenData=  authorization.GetToken();
             //string token = tokenData.Token;
+            //Dictionary<String, String> pList = new Dictionary<String, String>();
+            //List<KeyValuePair<string, string>> list = new List<KeyValuePair<string, string>>();
+
+
             //GeneralApi generalApi = new GeneralApi();
             //GeneralApiParams apiParams = new GeneralApiParams();
-            //generalApi.SetName("youzan.trade.get");
-            //generalApi.SetVersion("4.0.0");
+            //generalApi.SetName("youzan.retail.open.online.spu.release");
+            //generalApi.SetVersion("3.0.0");
             //generalApi.SetOAuthType(common.constant.OAuthEnum.TOKEN);
-            //apiParams.AddParam("tid", "E20190521143436044000035");
+            //apiParams.AddParam("retail_source", "DAOYAN");
+            //apiParams.AddParam("content", "<p>432<imgdata-origin-width=\\\"1224\\\"data-origin-height=\\\"924\\\"src=\\\"//img.yzcdn.cn/upload_files/2019/09/19/FtjyJv_Gr_Ti9H7rYiNn7s0OqbxW.png!730x0.jpg\\\"/></p>");
+            //apiParams.AddParam("pre_sale", "False");
+            //apiParams.AddParam("delivery_template_id", "782231");
+            //apiParams.AddParam("is_virtual", "0");
+            //apiParams.AddParam("components_extra_id", "64848302");
+            //apiParams.AddParam("sold_time", "0");
+            //apiParams.AddParam("purchase_right", "False");
+            //apiParams.AddParam("spu_code", "BM49570907669");
+            //apiParams.AddParam("price", "11.00");
+            //apiParams.AddParam("title", "艾斯测试网店");
+            //apiParams.AddParam("goods_no", "123");
+            //apiParams.AddParam("total_stock", "1");
+            //apiParams.AddParam("is_display", "0");
+            //apiParams.AddParam("picture", "[{'url':'https://img.yzcdn.cn/upload_files/2017/06/19/Fme9JZz7T1rB8sSLnsnCk2gILNp_.png'}]");
             //generalApi.SetAPIParams(apiParams);
-
             //IYouZanClient defaultYZClient = new DefaultYZClient();
-
-            //string result  =  defaultYZClient.Invoke(generalApi,new Token("32dcf5274f846e41270a2e9fcd4bdd8a"),null,null);
-
-
+            //string result  =  defaultYZClient.Invoke(generalApi,new Token("f9650e560c2ec67fd5941f91df1db7a"), null, null,true);
             //Console.WriteLine("request result *******************"+result);
 
 
@@ -56,16 +70,31 @@ namespace open_sdk
             //};
             //OauthToken.TokenData tokenData = refresh.GetToken();
 
-            //Silent silent = new Silent("bifrost-console", "bifrost-console", 2003777768);
+            //Silent silent = new Silent("8d47c12fa8d4914c5e", "57df61dc21c391bfc6cb6a6d3b540dfb", 43005315);
             //OauthToken.TokenData silenToken  =silent.GetToken();
             //string token = silenToken.Token;
             //Console.WriteLine("request result *******************" + token);
 
+            GeneralApi generalApi = new GeneralApi();
+            GeneralApiParams apiParams = new GeneralApiParams();
+            generalApi.SetName("youzan.shop.get");
+            generalApi.SetVersion("3.0.0");
+            generalApi.SetOAuthType(common.constant.OAuthEnum.TOKEN);
+            generalApi.SetAPIParams(apiParams);
+            IYouZanClient defaultYZClient = new DefaultYZClient();
+            //升级前
+            string result  =  defaultYZClient.Invoke(generalApi,new Token("f9650e560c2ec67fd5941f91df1db7a"), null, null);
+            //升级后
+            string result2 = defaultYZClient.Invoke(generalApi, new Token("f9650e560c2ec67fd5941f91df1db7a"), null, null,true);
+
+            Console.WriteLine("request result *******************"+result);
 
 
-            Silent silent = new Silent("bifrost-console", "bifrost-console", 2003777768);
-            OauthToken.TokenData silenToken = silent.GetToken();
-            string token = silenToken.Token;
+
+
+            //Silent silent = new Silent("bifrost-console", "bifrost-console", 2003777768);
+            //OauthToken.TokenData silenToken = silent.GetToken();
+            //string token = silenToken.Token;
         }
     }
 }

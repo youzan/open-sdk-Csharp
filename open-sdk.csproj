@@ -22,6 +22,8 @@
   <ItemGroup>
     <Compile Remove="auth\EmptyInterface.cs" />
     <Compile Remove="Properties\AssemblyInfo.cs" />
+    <Compile Remove="api\GeneralApiParamsObject.cs" />
+    <Compile Remove="api\IApiParamsObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />

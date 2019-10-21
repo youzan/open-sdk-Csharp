@@ -21,7 +21,7 @@ namespace open_sdk.http
         public DefaultHttpClient() { }
 
 
-        public string Send(string url, IDictionary<string, string> apiParams, IDictionary<string, string> headers, List<KeyValuePair<string, string>> files)
+        public string Send(string url, IDictionary<string, string> apiParams, IDictionary<string, string> headers, List<KeyValuePair<string, string>> files, bool isRichText = false)
         {
 
             using (var httpClient = new HttpClient())

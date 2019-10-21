@@ -9,7 +9,7 @@ namespace open_sdk.core
 {
     public interface IYouZanClient
     {
-        string Invoke(IAPI api, IAuth auth,IDictionary<string, string> headers, List<KeyValuePair<string, string>> files);
+        string Invoke(IAPI api, IAuth auth,IDictionary<string, string> headers, List<KeyValuePair<string, string>> files, bool isRichText = false);
 
     }
 }
