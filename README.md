@@ -1,11 +1,16 @@
 # open-sdk-Cshrap
 有赞云开放平台SDK C#语言
-## 1. 获取Token
 
+## 1.获取及刷新Token
+   ### 获取TOKEN
     Silent silent = new Silent("bifrost-console", "bifrost-console",18163424);
     ToKenData oAuthToken = silent.GetToken();
     string token = oAuthToken.Toke
-    
+   ### 刷新TOKEN
+    RefreshToken refreshToken = new RefreshToken("YOUR_CLIENT_ID", "YOUR_CLIENT_SECRET");
+    refreshToken.FreshToken = "YOUR_REFRESH_TOKEN";
+    OauthToken.TokenData newRefreshToken = refreshToken.GetToken();
+    string newToken = newRefreshToken.Token;
 ## 2.正常调用
 
             GeneralApi generalApi = new GeneralApi();
@@ -67,7 +72,7 @@
 
 
 | 参数名| 类型 |实例值|参数描述
-| ------ | ------ | ------ |--------|--------
+| ------| ------ | ------ |--------
 | expires | String|bifrost-console|过期时间
 | access_token | String |5a2be800b5a5e903be484b24b8197dfc|token
 | authority_id |String |18163424|授权ID
