@@ -3,16 +3,42 @@
 
 ## 1.获取及刷新Token
    ### 获取TOKEN
-    Silent silent = new Silent("bifrost-console", "bifrost-console",18163424);
-    ToKenData oAuthToken = silent.GetToken();
-    string token = oAuthToken.Toke
+            using System;
+            using open_sdk.api;
+            using open_sdk.auth;
+            using open_sdk.core;
+            using open_sdk.token;
+            using open_sdk.token.type;
+            namespace open_sdk
+            
+            Silent silent = new Silent("YOUR_CLIENT_ID", "YOUR_CLIENT_SECRET", 123456);
+            OauthToken.TokenData silenToken  =silent.GetToken();
+            string token = silenToken.Token;
+            Console.WriteLine("request result *******************" + token);
+
    ### 刷新TOKEN
-    RefreshToken refreshToken = new RefreshToken("YOUR_CLIENT_ID", "YOUR_CLIENT_SECRET");
-    refreshToken.FreshToken = "YOUR_REFRESH_TOKEN";
-    OauthToken.TokenData newRefreshToken = refreshToken.GetToken();
-    string newToken = newRefreshToken.Token;
+            using System;
+            using open_sdk.api;
+            using open_sdk.auth;
+            using open_sdk.core;
+            using open_sdk.token;
+            using open_sdk.token.type;
+            namespace open_sdk
+            
+          RefreshToken refreshToken = new RefreshToken("YOUR_CLIENT_ID", "YOUR_CLIENT_SECRET");
+          refreshToken.FreshToken = "YOUR_REFRESH_TOKEN";
+          OauthToken.TokenData newRefreshToken = refreshToken.GetToken();
+          string newToken = newRefreshToken.Token;
 ## 2.正常调用
 
+               using System;
+               using open_sdk.api;
+               using open_sdk.auth;
+               using open_sdk.core;
+               using open_sdk.token;
+               using open_sdk.token.type;
+               namespace open_sdk
+            
             GeneralApi generalApi = new GeneralApi();
             GeneralApiParams apiParams = new GeneralApiParams();
             generalApi.SetName("youzan.ump.promocard.detail.get");
@@ -23,8 +49,7 @@
             generalApi.SetAPIParams(apiParams);
 
             IYouZanClient defaultYZClient = new DefaultYZClient();
-
-            string result  =  defaultYZClient.Invoke(generalApi,newToken(oAuthToken.Token));
+            string result  =  defaultYZClient.Invoke(generalApi,new Token(token), null, null);
 
 
 
