@@ -11,7 +11,7 @@
             using open_sdk.token.type;
             namespace open_sdk
             
-            Silent silent = new Silent("YOUR_CLIENT_ID", "YOUR_CLIENT_SECRET", 123456);
+            Silent silent = new Silent("YOUR_CLIENT_ID", "YOUR_CLIENT_SECRET", YOUR_KDT_ID);
             OauthToken.TokenData silenToken  =silent.GetToken();
             string token = silenToken.Token;
             Console.WriteLine("request result *******************" + token);
