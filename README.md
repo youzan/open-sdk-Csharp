@@ -1,5 +1,5 @@
 # open-sdk-Cshrap
-有赞云开放平台SDK C#语言
+有赞云开放平台SDK C#语言，基于netCore架构搭建，采用framework的同学，请修改后自行编译新的dll
 
 ## 1.获取及刷新Token
    ### 获取TOKEN
